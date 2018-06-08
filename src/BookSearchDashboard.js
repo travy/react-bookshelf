@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import BookShelf from './BookShelf.js'
-import SearchBar from './SearchBar.js'
-import * as BooksAPI from './BooksAPI.js'
+import BookGrid from './BookGrid'
+import SearchBar from './SearchBar'
+import * as BooksAPI from './BooksAPI'
 
 class BookSearchDashboard extends Component {
     state = {
@@ -39,7 +39,7 @@ class BookSearchDashboard extends Component {
             <div className="search-dashboard">
                 <SearchBar onSearch={this.handleSearch} />
                 <div className="search-books-results">
-                    <BookShelf books={this.state.books} />
+                    <BookGrid books={this.state.books} />
                 </div>
             </div>
         )

@@ -1,16 +1,13 @@
 import React from 'react'
-import Book from './Book.js'
+import BookGrid from './BookGrid'
 
-const BookShelf = (props) => (
-    <ul className="book-library books-grid">
-    {
-        props.books.map(book => (
-            <li key={"book-item-" + book.id}>
-                <Book book={book} />
-            </li>
-        ))
-    }
-    </ul>
+const BookShelf = props => (
+    <div className='bookshelf'>
+        <h2 className='bookshelf-title'>{props.title}</h2>
+        <div className='bookshelf-books'>
+            <BookGrid books={props.books} />
+        </div>
+    </div>
 )
 
 export default BookShelf
