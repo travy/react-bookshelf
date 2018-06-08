@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import BookShelf from './BookShelf.js'
-import SearchBar from './SearchBar.js'
-import * as BooksAPI from './BooksAPI.js'
+import BookShelf from './BookShelf'
+import SearchBar from './SearchBar'
+import * as BooksAPI from './BooksAPI'
 
 class BookSearchDashboard extends Component {
     state = {

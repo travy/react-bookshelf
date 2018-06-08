@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 class SearchBar extends Component {
@@ -19,11 +20,13 @@ class SearchBar extends Component {
     handleTyping = (event) => {
         event.preventDefault()
 
+        //  update the search bar to track the users input
         const terms = event.target.value.trim()
         this.setState(prev => ({
             searchTerms: terms
         }))
 
+        //  execute the search operation using the users input
         this.props.onSearch(terms)
     }
 
@@ -31,7 +34,7 @@ class SearchBar extends Component {
         return (
             <form className="search-books" action="#" method="get">
                 <div className="search-books-bar">
-                    <a className="close-search" href="/">Close</a>
+                    <Link className="close-search" to='/'>Close</Link>
                     <div className="search-books-input-wrapper">
                         <input type="text" placeholder="Search by title or author"
                             onChange={this.handleTyping} value={this.state.searchTerms} />

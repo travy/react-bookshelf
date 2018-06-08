@@ -1,5 +1,5 @@
 import React from 'react'
-import Book from './Book.js'
+import Book from './Book'
 
 const BookShelf = (props) => (
     <ul className="book-library books-grid">
