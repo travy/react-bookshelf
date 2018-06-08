@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import BookShelf from './BookShelf'
 import * as BooksAPI from './BooksAPI'
+import './icons/search-icon.svg'
 
 class BookCollectionDashboard extends Component {
     state = {
@@ -45,13 +46,14 @@ class BookCollectionDashboard extends Component {
                 <div className='list-books-title'>
                     <h1>My Book Collection</h1>
                 </div>
-                <Link className='find-books-button' to='/search'>Search</Link>
-
+                
                 <div className='list-books-content'>
                     <BookShelf title='Currently Reading' books={this.state.currentlyReading} />
                     <BookShelf title='Want to Read' books={this.state.wantToRead} />
                     <BookShelf title='Read' books={this.state.read} />
                 </div>
+
+                <Link className='open-search' to='/search'>Search</Link>
             </div>
         )
     }
