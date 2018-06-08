@@ -174,3 +174,15 @@ body, .app {
   text-align: center;
   font-size: 0.8em;
 }
+
+.book-view-button {
+  border: solid black 1px;
+  border-radius: 15px;
+  padding: 10px;
+  background: #999;
+  color: white;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}

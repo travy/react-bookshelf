@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Book = (props) => (
     <div className="book">
@@ -16,6 +17,7 @@ const Book = (props) => (
         </div>
         <h1 className="book-cover-title">{props.book.title}</h1>
         <h2 className="book-authors">{props.book.authors && props.book.authors.length > 0 ? props.book.authors[0] : 'Unknown'}</h2>
+        <Link className='book-view-button' to={'/book/' + props.book.id}>View</Link>
     </div>
 )
 
