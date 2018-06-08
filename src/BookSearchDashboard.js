@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BookShelf from './BookShelf'
+import BookGrid from './BookGrid'
 import SearchBar from './SearchBar'
 import * as BooksAPI from './BooksAPI'
 
@@ -39,7 +39,7 @@ class BookSearchDashboard extends Component {
             <div className="search-dashboard">
                 <SearchBar onSearch={this.handleSearch} />
                 <div className="search-books-results">
-                    <BookShelf books={this.state.books} />
+                    <BookGrid books={this.state.books} />
                 </div>
             </div>
         )

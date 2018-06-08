@@ -1,13 +1,12 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Route } from 'react-router-dom'
+import BookCollectionDashboard from './BookCollectionDashboard'
 import BookSearchDashboard from './BookSearchDashboard'
 import './App.css'
 
 const Routes = (props) => (
     <div className="App">
-        <Route exact path='/' render={() => (
-            <Link className='search' to='/search'>Search</Link>
-        )} />
+        <Route exact path='/' component={BookCollectionDashboard} />
         <Route path='/search' component={BookSearchDashboard} />
     </div>
 )
