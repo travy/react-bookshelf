@@ -15,7 +15,7 @@ const Book = (props) => (
             </div>
         </div>
         <h1 className="book-cover-title">{props.book.title}</h1>
-        <h2 className="book-authors">{props.book.authors.length > 0 ? props.book.authors[0] : 'Unknown'}</h2>
+        <h2 className="book-authors">{props.book.authors && props.book.authors.length > 0 ? props.book.authors[0] : 'Unknown'}</h2>
     </div>
 )
 

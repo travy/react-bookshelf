@@ -1,18 +1,30 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class SearchBar extends Component {
+    static propTypes() {
+        return {
+            onSearch: PropTypes.func.isRequired
+        }
+    }
+
     state = {
         searchTerms: ''
     }
 
+    /**
+     * Updates the state of the component as the user types.
+     *
+     */
     handleTyping = (event) => {
         event.preventDefault()
 
-        const terms = event.target.value
-
+        const terms = event.target.value.trim()
         this.setState(prev => ({
             searchTerms: terms
         }))
+
+        this.props.onSearch(terms)
     }
 
     render() {
