@@ -7,6 +7,14 @@ let token = localStorage.token
 if (!token)
   token = localStorage.token = Math.random().toString(36).substr(-8)
 
+//  Provides an object with the known shelf types
+export const bookShelves = {
+  currentlyReading: 'currentlyReading',
+  wantToRead: 'wantToRead',
+  read: 'read',
+  none: 'none'
+}
+
 const headers = {
   'Accept': 'application/json',
   'Authorization': token

@@ -64,6 +64,38 @@ body, .app {
 
 /* search page */
 
+.book-info-header {
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+  white-space: nowrap;
+}
+.book-info-header h1 {
+  padding-left: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-info-header .back-button {
+  background-color: inherit;
+  color: white;
+}
+
+.back-button, .close-search {
+  display: block;
+  top: 20px;
+  left: 15px;
+  width: 50px;
+  height: 53px;
+  background: white;
+  background-image: url('./icons/arrow-back.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 28px;
+  font-size: 0;
+}
+
 .search-books-bar {
   position: fixed;
   width: 100%;
@@ -83,20 +115,6 @@ body, .app {
   font-size: 1.25em;
   border: none;
   outline: none;
-}
-
-.close-search {
-  display: block;
-  top: 20px;
-  left: 15px;
-  width: 50px;
-  height: 53px;
-  background: white;
-  background-image: url('./icons/arrow-back.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 28px;
-  font-size: 0;
 }
 
 .search-books-results {
@@ -173,4 +191,147 @@ body, .app {
   padding: 20px 10px 0;
   text-align: center;
   font-size: 0.8em;
+}
+
+.book-view-button {
+  border: solid black 1px;
+  border-radius: 15px;
+  padding: 10px;
+  background: #999;
+  color: white;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/**
+ *  TODO-
+ *  The meta section should flow left to right for displays wider than 820px
+ *  and should resolve to top to bottom for displays of smaller widths.
+ */
+.book-meta-wrapper {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-meta-wrapper .book-meta-section {
+  margin: 10px;
+}
+
+.book-meta-section-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.book-meta-section-info .book-cover {
+  height: 386px;
+  width: 300px;
+  margin-right: 20px;
+}
+
+.book-meta-section-info .book-title, .book-meta-section-info .book-subtitle {
+  text-align: center;
+  margin: 0;
+}
+.book-meta-section-info .book-title {
+  font-size: 16pt;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.book-meta-section-info .book-subtitle {
+  font-size: 10pt;
+  text-transform: lowercase;
+  text-emphasis: initial;
+}
+
+.flow-top-down {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.flow-left-right {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.collection-list {
+  width: 100%;
+}
+.collection-list h3 {
+  font-size: 1em;
+  margin:0
+}
+
+
+.box-shadow {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.section-padding {
+  padding: 20px;
+}
+
+.book-description {
+  text-align: justify;
+}
+
+.shelf-banner {
+  background: lightpink;
+}
+.shelf-banner .message {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14pt;
+  margin: 0;
+}
+
+.category * {
+  display: inline-block;
+  font-size: 1em;
+  margin:0
+}
+.category-title:after {
+  content: ":  ";
+  white-space: pre;
+}
+
+.delimeter {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.cover-art {
+  position: relative;
+}
+
+.preview-button {
+  background: #2e7d32;
+  border: solid black 1px;
+  border-radius: 50px;
+  padding:10px;
+  width: 100px;
+  position: absolute;
+  bottom: -5px;
+  right: 8px;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.preview-button-link {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
 }
