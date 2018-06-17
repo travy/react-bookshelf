@@ -19,7 +19,7 @@ class BookSearchDashboard extends Component {
             return
         }
 
-        BooksAPI.search(terms, 5).then((books) => {
+        BooksAPI.search(terms, 25).then((books) => {
             if (books.error) {
                 this.clearBooks()
             } else {
