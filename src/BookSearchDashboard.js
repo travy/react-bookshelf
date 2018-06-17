@@ -8,6 +8,10 @@ class BookSearchDashboard extends Component {
         books: []
     }
 
+    /**
+     * Perform a search using the API.
+     *
+     */
     handleSearch = (terms) => {
         //  don't perform AJAX if terms is empty or undefined
         if (! terms) {
@@ -22,6 +26,14 @@ class BookSearchDashboard extends Component {
                 this.insertBooks(books)
             }
         })
+    }
+
+    /**
+     * Update the bookshelf that a given book is on.
+     *
+     */
+    handleShelfSelection = (book, shelf) => {
+        BooksAPI.update(book, shelf)
     }
 
     clearBooks() {
@@ -39,7 +51,7 @@ class BookSearchDashboard extends Component {
             <div className="search-dashboard">
                 <SearchBar onSearch={this.handleSearch} />
                 <div className="search-books-results">
-                    <BookGrid books={this.state.books} />
+                    <BookGrid books={this.state.books} onShelfSelection={this.handleShelfSelection} />
                 </div>
             </div>
         )

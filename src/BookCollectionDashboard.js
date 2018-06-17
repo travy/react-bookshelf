@@ -23,20 +23,43 @@ class BookCollectionDashboard extends Component {
                 switch (book.shelf) {
                     case 'currentlyReading':
                         newState.currentlyReading.push(book)
-                        break;
+                        break
                     case 'wantToRead':
                         newState.wantToRead.push(book)
-                        break;
+                        break
                     case 'read':
                         newState.read.push(book)
-                        break;
+                        break
                     default:
                         console.log('Should not have occurred')
-                        break;
+                        break
                 }
-            }) 
+            })
 
             this.setState(prev => newState)
+        })
+    }
+
+    handleShelfSelection = (book, newShelf) => {
+        BooksAPI.update(book, newShelf).then(list => {
+            const oldShelf = book.shelf
+
+            BooksAPI.get(book.id).then(book => {
+                let newState = {}
+
+                //  remove the book from the previous shelf
+                newState[oldShelf] = this.state[oldShelf].filter(osBook => (
+                    osBook.id !== book.id
+                ))
+
+                //  add the book to a new shelf if it was not added to "None"
+                if (book.shelf !== BooksAPI.bookShelves.none) {
+                    this.state[newShelf].push(book)
+                    newState[newShelf] = this.state[newShelf]
+                }
+
+                this.setState(prev => newState)
+            })
         })
     }
 
@@ -48,9 +71,9 @@ class BookCollectionDashboard extends Component {
                 </div>
                 
                 <div className='list-books-content'>
-                    <BookShelf title='Currently Reading' books={this.state.currentlyReading} />
-                    <BookShelf title='Want to Read' books={this.state.wantToRead} />
-                    <BookShelf title='Read' books={this.state.read} />
+                    <BookShelf title='Currently Reading' books={this.state.currentlyReading} onShelfSelection={this.handleShelfSelection} />
+                    <BookShelf title='Want to Read' books={this.state.wantToRead} onShelfSelection={this.handleShelfSelection} />
+                    <BookShelf title='Read' books={this.state.read} onShelfSelection={this.handleShelfSelection} />
                 </div>
 
                 <Link className='open-search' to='/search'>Search</Link>

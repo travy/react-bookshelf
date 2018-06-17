@@ -282,7 +282,8 @@ body, .app {
 }
 
 .shelf-banner {
-  background: lightpink;
+  background: cadetblue;
+  padding: 20px;
 }
 .shelf-banner .message {
   color: white;

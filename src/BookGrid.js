@@ -6,7 +6,7 @@ const BookGrid = (props) => (
     {
         props.books.map(book => (
             <li key={"book-item-" + book.id}>
-                <Book book={book} />
+                <Book book={book} {...props} />
             </li>
         ))
     }
