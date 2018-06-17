@@ -336,3 +336,48 @@ body, .app {
   text-transform: uppercase;
   color: white;
 }
+
+.loading-icon-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-icon {
+  position: relative;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  top: calc(50% - 60px);
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.no-search-wrapper {
+  width: 100%;
+}
+
+.no-search-image {
+  display: block;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+}
+
+.no-search-message {
+  color: #b5bdc6;
+  font-size: 15pt;
+  text-align: center;
+}
+
+.book-dashboard-content {
+  max-width: 1000px;
+  margin:auto;
+}
