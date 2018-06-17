@@ -19,36 +19,6 @@ class BookDashboard extends Component {
         })
     }
 
-    /**
-     * Determines the message to display if a book is on a specific
-     * shelf
-     *
-     */
-    getShelfMessage() {
-        const shelf = this.state.book.shelf
-        const bookShelves = BooksAPI.bookShelves
-
-        switch (shelf) {
-            case bookShelves.currentlyReading:
-                return 'You are currently reading this title'
-            case bookShelves.wantToRead:
-                return 'This book is in your reading list'
-            case bookShelves.read:
-                return 'You have already read this book'
-            default:
-                return null;
-        }
-    }
-
-    /**
-     * Determines if the book item has been added to a bookshelf.
-     *
-     */
-    isBookOnShelf() {
-        return this.state.book.shelf
-                && this.state.book.shelf !== BooksAPI.bookShelves.none
-    }
-
     render() {
         const title = this.state.book ? this.state.book.title : 'Loading ...'
         const mainContent = ! this.state.book
