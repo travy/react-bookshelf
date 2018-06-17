@@ -62,7 +62,9 @@ class BookDashboard extends Component {
                     <h1>{title}</h1>
                 </header>
 
-                {mainContent}
+                <div className='book-dashboard-content'>
+                    {mainContent}
+                </div>
             </div>
         )
     }

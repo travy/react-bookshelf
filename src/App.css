@@ -376,3 +376,8 @@ body, .app {
   font-size: 15pt;
   text-align: center;
 }
+
+.book-dashboard-content {
+  max-width: 1000px;
+  margin:auto;
+}
