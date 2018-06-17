@@ -359,3 +359,20 @@ body, .app {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.no-search-wrapper {
+  width: 100%;
+}
+
+.no-search-image {
+  display: block;
+  width: 800px;
+  height: 600px;
+  margin: auto;
+}
+
+.no-search-message {
+  color: #b5bdc6;
+  font-size: 15pt;
+  text-align: center;
+}

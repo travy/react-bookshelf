@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import BookGrid from './BookGrid'
+import NoSearchResults from './NoSearchResults'
 import SearchBar from './SearchBar'
 import * as BooksAPI from './BooksAPI'
 
@@ -47,11 +48,15 @@ class BookSearchDashboard extends Component {
     }
 
     render () {
+        const mainContent = this.state.books.length > 0
+                ? <BookGrid books={this.state.books} onShelfSelection={this.handleShelfSelection} />
+                : <NoSearchResults />
+
         return (
             <div className="search-dashboard">
                 <SearchBar onSearch={this.handleSearch} />
                 <div className="search-books-results">
-                    <BookGrid books={this.state.books} onShelfSelection={this.handleShelfSelection} />
+                    {mainContent}
                 </div>
             </div>
         )
