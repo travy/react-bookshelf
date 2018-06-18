@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Prevents the application from throwing a TypeError when a books JSON entry is missing the
   image thumbnail meta information
+- Allow users to add the space character in search results
 
 ## 1.0.0 - 2018-06-17
 
