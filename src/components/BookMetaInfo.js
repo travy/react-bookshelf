@@ -36,13 +36,17 @@ class BookMetaInfo extends Component {
     }
 
     render() {
+        const coverArt = this.props.book.imageLinks
+                ? this.props.book.imageLinks.thumbnail
+                : require('../images/no-image-available.png')
+
         return (
             <div className='book-meta-wrapper'>
                 {this.isBookOnShelf() && <Alert message={this.getShelfMessage()} />}
 
                 <div className='book-meta-section book-meta-section-info'>
                     <div className='cover-art'>
-                        <img className='book-cover box-shadow' src={this.props.book.imageLinks.thumbnail} alt="Book Artwork" />
+                        <img className='book-cover box-shadow' src={coverArt} alt="Book Artwork" />
                         <div className='preview-button'>
                             <a className='preview-button-link' href={this.props.book.previewLink} target='_blank'>Preview</a>
                         </div>
