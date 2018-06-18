@@ -20,8 +20,9 @@ class SearchBar extends Component {
     handleTyping = (event) => {
         event.preventDefault()
 
-        //  update the search bar to track the users input
-        const terms = event.target.value.trim()
+        //  update the search bar to track the users input, and trim any
+        //  white space from the begining of the search terms
+        const terms = event.target.value.replace(/^\s+/g, '')
         this.setState(prev => ({
             searchTerms: terms
         }))
