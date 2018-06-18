@@ -391,8 +391,9 @@ a.open-search {
 
 .no-search-image {
   display: block;
-  width: 800px;
-  height: 600px;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
   margin: auto;
 }
 
