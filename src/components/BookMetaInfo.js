@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from '../BooksAPI'
 import Alert from './Alert'
 import Category from './Category'
 import CollectionList from './CollectionList'
@@ -48,7 +48,7 @@ class BookMetaInfo extends Component {
                         </div>
                     </div>
 
-                    <div className='flow-top-down box-shadow section-padding'>
+                    <div className='flow-top-down box-shadow section-padding book-meta'>
                         <h1 className='book-title'>{this.props.book.title}</h1>
                         <h2 className='book-subtitle'>{this.props.book.subtitle}</h2>
                         

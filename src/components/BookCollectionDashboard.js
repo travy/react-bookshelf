@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import BookShelf from './BookShelf'
-import * as BooksAPI from './BooksAPI'
-import './icons/search-icon.svg'
+import * as BooksAPI from '../BooksAPI'
+import '../icons/search-icon.svg'
 
 class BookCollectionDashboard extends Component {
     state = {

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import BookCollectionDashboard from './BookCollectionDashboard'
-import BookSearchDashboard from './BookSearchDashboard'
-import BookDashboard from './BookDashboard'
+import BookCollectionDashboard from './components/BookCollectionDashboard'
+import BookSearchDashboard from './components/BookSearchDashboard'
+import BookDashboard from './components/BookDashboard'
 import './App.css'
 
 const Routes = (props) => (

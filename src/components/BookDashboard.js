@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import LoadingIcon from './LoadingIcon'
 import BookMetaInfo from './BookMetaInfo'
-import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from '../BooksAPI'
 
 class BookDashboard extends Component {
     state = {
@@ -17,36 +17,6 @@ class BookDashboard extends Component {
                 book: book
             })
         })
-    }
-
-    /**
-     * Determines the message to display if a book is on a specific
-     * shelf
-     *
-     */
-    getShelfMessage() {
-        const shelf = this.state.book.shelf
-        const bookShelves = BooksAPI.bookShelves
-
-        switch (shelf) {
-            case bookShelves.currentlyReading:
-                return 'You are currently reading this title'
-            case bookShelves.wantToRead:
-                return 'This book is in your reading list'
-            case bookShelves.read:
-                return 'You have already read this book'
-            default:
-                return null;
-        }
-    }
-
-    /**
-     * Determines if the book item has been added to a bookshelf.
-     *
-     */
-    isBookOnShelf() {
-        return this.state.book.shelf
-                && this.state.book.shelf !== BooksAPI.bookShelves.none
     }
 
     render() {

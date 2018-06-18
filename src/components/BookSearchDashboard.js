@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import BookGrid from './BookGrid'
 import NoSearchResults from './NoSearchResults'
 import SearchBar from './SearchBar'
-import * as BooksAPI from './BooksAPI'
+import * as BooksAPI from '../BooksAPI'
 
 class BookSearchDashboard extends Component {
     state = {
