@@ -50,5 +50,5 @@ yarn build
 ## Credits
 
 Credit for desiging of the No Search Found Bear icon goes to Vic on Dribbble.com.
-The original work can be found (here)[https://dribbble.com/shots/2485318-No-Results]
-More of her work can be found (here)[https://dribbble.com/vicbell]
+The original work can be found [here](https://dribbble.com/shots/2485318-No-Results)
+More of her work can be found [here](https://dribbble.com/vicbell)
