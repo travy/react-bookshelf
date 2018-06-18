@@ -23,10 +23,14 @@ class Book extends Component {
     }
 
     render() {
+        const coverArt = this.props.book.imageLinks
+                ? this.props.book.imageLinks.thumbnail
+                : require('../images/no-image-available.png')
+
         return (
             <div className="book">
                 <div className="book-top">
-                    <img className="book-cover" src={this.props.book.imageLinks.thumbnail} alt={this.props.book.title} />
+                <img className="book-cover" src={coverArt} alt={this.props.book.title} />
                     <div className="book-shelf-changer">
                         <select onChange={this.handleFormChange} value={this.state.shelf}>
                             <option value="none" disabled>Move to...</option>

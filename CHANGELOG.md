@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Bugfixes
+
+- Prevents the application from throwing a TypeError when a books JSON entry is missing the
+  image thumbnail meta information
+
 ## 1.0.0 - 2018-06-17
 
 ### Added
@@ -19,3 +26,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - Special Thanks to Vic on Dribbble for her awesome bear design which I
   used for the search page.  Image can be found [here](https://dribbble.com/shots/2485318-No-Results)
+
+[Unreleased]: https://github.com/travy/react-bookshelf/compare/v1.0.0...HEAD
