@@ -14,3 +14,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Can view information on a book by pressing the view button
 - Remove books by assigning them to None
 - Added the MIT license
+
+### Credit
+
+- Special Thanks to Vic on Dribbble for her awesome bear design which I
+  used for the search page.  Image can be found [here](https://dribbble.com/shots/2485318-No-Results)
