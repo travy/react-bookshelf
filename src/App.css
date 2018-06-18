@@ -48,7 +48,7 @@ body, .app {
   right: 25px;
   bottom: 25px;
 }
-.open-search a {
+a.open-search {
   display: block;
   width: 50px;
   height: 50px;
@@ -391,8 +391,9 @@ body, .app {
 
 .no-search-image {
   display: block;
-  width: 800px;
-  height: 600px;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
   margin: auto;
 }
 
