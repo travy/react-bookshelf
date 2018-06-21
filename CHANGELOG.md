@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [UNRELEASED]
+## [1.0.2] - 2018-06-20
 
 ### Bugfixes
 
@@ -35,5 +35,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - Special Thanks to Vic on Dribbble for her awesome bear design which I
   used for the search page.  Image can be found [here](https://dribbble.com/shots/2485318-No-Results)
 
-[UNRELEASED]: https://github.com/travy/react-bookshelf/compare/1.0.1...develop
+[1.0.2]: https://github.com/travy/react-bookshelf/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/travy/react-bookshelf/compare/1.0.0...1.0.1
