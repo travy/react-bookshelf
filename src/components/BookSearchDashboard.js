@@ -37,14 +37,40 @@ class BookSearchDashboard extends Component {
         BooksAPI.update(book, shelf)
     }
 
+    /**
+     * Clears out all search results.
+     *
+     */
     clearBooks() {
         this.insertBooks([])
     }
 
+    /**
+     * Inserts a collection of books into the display of books.  Each book entry
+     * will show the shelf that it resides on when the options button is pressed.
+     *
+     * @param {Array} books 
+     */
     insertBooks(books) {
-        this.setState(prev => ({
-            books: books
-        }))
+        BooksAPI.getAll().then(booksOnShelves => {
+            //  construct an array with all the ids for books on a shelf, preserving the order
+            const shelfIds = booksOnShelves.map(book => {
+                return book.id
+            })
+
+            //  iterate through all the search results, updating the shelf category when needed
+            books.forEach(book => {
+                const idOfBookOnShelf = shelfIds.indexOf(book.id)
+                if (idOfBookOnShelf >= 0) {
+                    book.shelf = booksOnShelves[idOfBookOnShelf].shelf
+                }
+            });
+            
+            //  update the state with the necessary books
+            this.setState(prev => ({
+                books: books
+            }))
+        })
     }
 
     render () {
